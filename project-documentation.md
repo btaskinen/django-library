@@ -89,3 +89,12 @@ Added Django settings section at the bottom of `.pylintrc` file:
 [DJANGO]
 django-settings-module=locallibrary.settings
 ```
+
+### Models defenition
+
+Models for the catolog app were defined in `/catalog/models.py`. After the models were added, the database migration was re-run to add the models to the database:
+
+```
+python manage.py makemigrations
+python manage.py migrate
+```
