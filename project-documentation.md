@@ -74,3 +74,18 @@ python3 manage.py migrate
 The development web server was run by calling the runserver command (in the same directory as manage.py):
 
 `python3 manage.py runserver`
+
+### Setting up pylint-django properly
+
+Created .pylintrc file by running command:
+
+`python -m pylint --generate-rcfile > .pylintrc`
+
+Added `pylint_django`to `load-plugins=` under `[MAIN]`
+
+Added Django settings section at the bottom of `.pylintrc` file:
+
+```
+[DJANGO]
+django-settings-module=locallibrary.settings
+```
