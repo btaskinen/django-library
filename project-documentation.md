@@ -98,3 +98,8 @@ Models for the catolog app were defined in `/catalog/models.py`. After the model
 python manage.py makemigrations
 python manage.py migrate
 ```
+
+### Django admin site
+Registered the catalog app models to the admin site by adding them to the admin configuration (/catalog/admin.py).
+
+Created a superuser by running `python manage.py createsuperuser`. Running the server (`python manage.py runserver`) and going to `http://127.0.0.1:8000/admin/` then allows for login as superuser.
