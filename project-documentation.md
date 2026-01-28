@@ -103,3 +103,5 @@ python manage.py migrate
 Registered the catalog app models to the admin site by adding them to the admin configuration (/catalog/admin.py).
 
 Created a superuser by running `python manage.py createsuperuser`. Running the server (`python manage.py runserver`) and going to `http://127.0.0.1:8000/admin/` then allows for login as superuser.
+
+Defined ModelAdmins to update how models are displayed on admin site.
