@@ -36,6 +36,7 @@ class BookListView(generic.ListView):
     The generic list view will query the database to get
     all Book records then render a template"""
     model = Book
+    paginate_by = 5
 
 class BookDetailView(generic.DetailView):
     """Class to generate detail views of books."""
