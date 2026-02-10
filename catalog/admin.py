@@ -33,7 +33,7 @@ admin.site.register(Genre)
 @admin.register(BookInstance)
 class AdminBookInstance(admin.ModelAdmin):
     """Customizes the Django admin interface for BookInstance objects."""
-    list_display = ('book', 'status', 'due_back', 'id')
+    list_display = ('book', 'status', 'due_back', 'id', 'borrower')
 
     list_filter = ('status', 'due_back')
 
@@ -42,7 +42,7 @@ class AdminBookInstance(admin.ModelAdmin):
             'fields': ('book', 'imprint', 'id')
         }),
         ('Availability', {
-            'fields': ('status', 'due_back')
+            'fields': ('status', 'due_back', 'borrower')
         })
     )
 
