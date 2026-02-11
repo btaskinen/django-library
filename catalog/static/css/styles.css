@@ -1,3 +1,30 @@
+body {
+  font-family: "SN Pro", sans-serif;
+}
+
+p {
+  margin: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px
+}
+
+.sidebar-container {
+  background-color: #bbdefb;
+}
+
+.container-fluid {
+  height: 100vh;
+}
+
+.container-fluid > .row {
+  min-height: 100%;
+}
+
 .sidebar-nav {
   margin-top: 20px;
   padding: 0;
@@ -11,7 +38,59 @@
 #logout-form {
   display: inline;
 }
-#logout-form button {
-  padding: 0;
-  margin: 0;
+
+.bolded-text {
+  font-weight: bold;
+}
+
+a, .link-button {
+  color: #0d47a1;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+a:hover, .link-button:hover {
+  text-decoration: underline;
+}
+
+.text-danger a {
+  color: #DC4535;
+}
+
+.default-button {
+  color: #e3f2fd;
+  background-color: #0d47a1;
+  border-radius: 8px;
+  border: none;
+  padding: 4px 8px;
+}
+
+.default-button:hover {
+  background-color: #2196f3;
+  cursor: pointer;
+}
+
+.default-button:active {
+  background-color: #0d47a1;
+}
+
+.default-input input {
+  border-radius: 8px;
+  border: solid 2px #0d47a1;
+  padding-left: 8px;
+}
+
+.default-input input:focus {
+  background-color: #e3f2fd;
+}
+
+.table-row {
+  border-collapse: separate;
+  border-spacing: 8px 8px;
+}
+
+li.user-line {
+  font-size: 20px;
 }

@@ -7,7 +7,7 @@
   {% endif %}
 
   {% if next %}
-    {% if user.is.authenticated %}
+    {% if user.is_authenticated %}
       <p>Your account doesn't have access to this page. To proceed,
       please login with an account that has access.</p>
     {% else %}
@@ -17,17 +17,17 @@
 
   <form method="post" action="{% url 'login' %}">
     {% csrf_token %}
-    <table>
+    <table class="table-row">
       <tr>
         <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
+        <td class="default-input">{{ form.username }}</td>
       </tr>
       <tr>
         <td>{{ form.password.label_tag}}</td>
-        <td>{{ form.password }}</td>
+        <td class="default-input">{{ form.password }}</td>
       </tr>
     </table>
-    <input type="submit" value="login">
+    <input type="submit" value="Login" class="default-button">
     <input type="hidden" name="next" value="{{ next }}">
   </form>
 
