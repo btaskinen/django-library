@@ -45,6 +45,9 @@
               <li class="sidebar-gap"><span class="bolded-text">Staff</span></li>
               <li><a href="{% url 'loaned-books' %}">All Borrowed</a></li>
               {% endif %}
+              {% if perms.catalog.add_author %}
+              <li><a href="{% url 'author-create' %}">Create author</a></li>
+              {% endif %}
             </ul>
           {% endblock %}
         </div>

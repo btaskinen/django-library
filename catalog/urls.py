@@ -1,6 +1,6 @@
 """Defines URL routes for the catalog application."""
 from django.urls import path
-from .views import (index, BookListView, BookDetailView, AuthorListView,
+from .views import (index, BookListView, BookDetailView, AuthorListView, AuthorCreate, AuthorUpdate, AuthorDelete,
 AuthorDetailView, LoanedBooksByUserListView, AllLoanedBooksListView, renew_book_librarian )
 
 urlpatterns = [
@@ -11,5 +11,8 @@ urlpatterns = [
     path('author/<int:pk>', AuthorDetailView.as_view(), name='author-detail'),
     path('mybooks/', LoanedBooksByUserListView.as_view(), name='my-borrowed'),
     path('loaned-books/', AllLoanedBooksListView.as_view(), name='loaned-books'),
-    path('book/<uuid:pk>/renew', renew_book_librarian, name='renew-book-librarian')
+    path('book/<uuid:pk>/renew', renew_book_librarian, name='renew-book-librarian'),
+    path('author/create/', AuthorCreate.as_view(), name='author-create'),
+    path('author/<int:pk>/update/', AuthorUpdate.as_view(), name='author-update'),
+    path('author/<int:pk>/delete/', AuthorDelete.as_view(), name='author-delete'),
 ]
